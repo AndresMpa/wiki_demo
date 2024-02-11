@@ -1,4 +1,4 @@
 # Propuestas de wiki
 
-- Wikijs [ref](./wikijs/)
-- Custom desde Nextjs
+- [Wikijs](./wikijs/)
+- [Custom desde Nextjs](./next_wiki/)
