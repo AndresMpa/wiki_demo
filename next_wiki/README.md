@@ -22,6 +22,7 @@ Esto abrirá el servidor en [http://localhost:3000](http://localhost:3000) en el
 
 - Este proyecto rederiza [Markdown](https://daringfireball.net/projects/markdown/syntax) a HTML, para esto se usa [remark](https://github.com/remarkjs/remark?tab=readme-ov-file#example-turning-markdown-into-html), un paquete de node que se encarga justamente de hacer eso.
 - Para renderizar mapas se usan 3 dependencias [OpenStreetMap](https://www.openstreetmap.org/) como provedor de los mapas, [Leaflet](https://leafletjs.com/) para renderizar los mapas y [React Leaflet](https://react-leaflet.js.org/) para renderizar esos mapas como componentes de React.
+- La estrategia de login se implementó usando [Passport](https://www.passportjs.org/)
 
 #### Oportunidades de mejora
 
