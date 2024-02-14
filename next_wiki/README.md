@@ -20,10 +20,35 @@ Esto abrirá el servidor en [http://localhost:3000](http://localhost:3000) en el
 
 ### Notas para desarrolladores:
 
-- Este proyecto rederiza [Markdown](https://daringfireball.net/projects/markdown/syntax) a HTML, para esto se usa [remark](https://github.com/remarkjs/remark?tab=readme-ov-file#example-turning-markdown-into-html), un paquete de node que se encarga justamente de hacer eso.
+La arquitectura propuesta fue la siguiente:
+
+![Architecture](./.doc/uml/arch.svg)
+
+- Este proyecto rederiza [Markdown](https://daringfireball.net/projects/markdown/syntax) a HTML, para esto se usa [remark](https://github.com/remarkjs/remark?tab=readme-ov-file#example-turning-markdown-into-html), un paquete de node que se encarga justamente de hacer eso. Para usuario nuevos algunas refencias utiles son [esta guía](https://commonmark.org/help/)
 - Para renderizar mapas se usan 3 dependencias [OpenStreetMap](https://www.openstreetmap.org/) como provedor de los mapas, [Leaflet](https://leafletjs.com/) para renderizar los mapas y [React Leaflet](https://react-leaflet.js.org/) para renderizar esos mapas como componentes de React.
 - La estrategia de login se implementó usando [Passport](https://www.passportjs.org/)
 - El proceso de agregado de images que no provienen de algún link exterior pasa por [reducir el tamaño](https://www.iloveimg.com/resize-image#resize-options,percentage) de las mismas y luego [reducir su peso](https://tinypng.com/); esto así para mejorar la carga de las misma en la pagina
+
+#### Sobre los tipos de paginas
+
+Next permite renderizar paginas en el client-side (CSR) y en el servidor server-site (SSR); ambos tipos de renderizado son usado, a continuación se dividen las paginas usando el nombre en el diseño de la carpeta [design](./.design/README.md) para las paginas CSR y SSR, respectivamente:
+
+> Nota: Tambien se permite [Incremental Site Generation](https://nextjs.org/docs/pages/building-your-application/data-fetching/incremental-static-regeneration) (ISG) pero no sería necesario en una primera instancia
+
+##### CSR - SPA-like
+
+- [Admin](./app/pages/admin/): Admin
+- [Crear FLISoL](./app/pages/create/): Add, Confirm, NotOnList, Create
+- [Material grafico](./app/pages/content/): [type]
+- [Historico - Todos los FLISoL](./app/pages/history/): All, Countries, Entries
+- [Registro](./app/pages/register/): Register
+- [Assist](./app/pages/assist/): Find
+
+##### SSR - Static pages
+
+- [Assist](./app/pages/assist/): Entry
+- [FAQ](./app/pages/faq): faq
+- [Main](./app/pages/index.tsx)
 
 #### Oportunidades de mejora
 
