@@ -1,0 +1,70 @@
+.wallpaper {
+  animation: slide 3s ease-in-out infinite alternate;
+  background-image: linear-gradient(
+    47deg,
+    rgba(253, 29, 29, 1) 50%,
+    rgba(252, 176, 69, 1) 50%
+  );
+  top: 0;
+  left: -50%;
+  right: -50%;
+  bottom: 0;
+
+  position: fixed;
+  opacity: 0.5;
+  z-index: -1;
+}
+
+.bar_1 {
+  animation-direction: alternate-reverse;
+  animation-duration: 4s;
+}
+
+.bar_2 {
+  animation-duration: 5s;
+}
+
+.bar_3 {
+  animation-duration: 6s;
+}
+
+.content {
+  border-radius: 0.25em;
+  box-sizing: border-box;
+  left: 80%;
+  padding: 10vmin;
+  position: fixed;
+  text-align: center;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.title {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  font-size: 28px;
+  background-color: black;
+  padding: 1.8em;
+  width: 450px;
+  vertical-align: middle;
+
+  -webkit-box-shadow: 10px 10px 0px 0px #ffffff;
+  box-shadow: 10px 10px 0px 0px #ffffff;
+
+  clip-path: polygon(0 0, 75% 0%, 100% 50%, 100% 100%, 25% 100%, 0% 50%);
+
+}
+
+.banner {
+    margin-top: 128px;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(-25%);
+  }
+  100% {
+    transform: translateX(25%);
+  }
+}
