@@ -66,3 +66,6 @@ Next permite renderizar paginas en el client-side (CSR) y en el servidor server-
 - [Render Markdown](https://nextjs.org/learn-pages-router/basics/dynamic-routes/render-markdown)
 - [Markdown and MDX](https://nextjs.org/docs/app/building-your-application/configuring/mdx)
 - [Next.js deployment documentation](https://nextjs.org/docs/deployment)
+- [React Markdown editor](https://uiwjs.github.io/react-md-editor)
+- [Ejemplo](https://github.com/uiwjs/react-md-editor)
+- [Markdown editor](https://dev.to/acidop/i-built-an-markdown-editor-using-nextjs-and-tailwindcss-46bg)
