@@ -1,5 +1,5 @@
 const OG = "./og"
-export const openGraphData = {
+const openGraphData = {
     title: 'FLISoL | Festival Latinoameticano de Instalación de Software Libre',
     siteName: 'FLISoL',
     description: "Disfruta del Festival Latinoameticano de Instalación de Software Libre",
@@ -54,7 +54,7 @@ const icons = {
     ],
 }
 
-export const defaultData = {
+const defaultData = {
     title: {
         template: "%s | Festival Latinoameticano de Instalación de Software Libre",
         default: "FLISoL | Festival Latinoameticano de Instalación de Software Libre"
@@ -75,3 +75,10 @@ export const defaultData = {
     ...robots,
     ...icons,
 }
+
+export const createMetadata = () => ({
+    ...defaultData,
+    openGraph: {
+        ...openGraphData,
+    },
+});
