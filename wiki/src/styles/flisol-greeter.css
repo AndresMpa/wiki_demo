@@ -1,0 +1,10 @@
+.flisol-logo {
+    background: url("/logos/flisol.png");
+    background-color: orangered;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: 35vw ;
+    background-size: 80%;
+
+    height: 300px;
+}
